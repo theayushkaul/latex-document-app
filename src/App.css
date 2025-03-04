@@ -1,0 +1,243 @@
+.App {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Add some spacing between elements */
+.App > * {
+  margin-bottom: 1rem;
+}
+
+.split {
+  display: flex;
+  flex-direction: row;
+}
+
+.gutter {
+  background-color: #f3f4f6;
+  position: relative;
+}
+
+.gutter:hover {
+  background-color: #e5e7eb;
+}
+
+.gutter.gutter-horizontal {
+  cursor: col-resize;
+  position: relative;
+}
+
+.gutter.gutter-horizontal::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 24px;
+  background-color: #d1d5db;
+  border-radius: 2px;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Add these styles to your existing App.css */
+
+.latex-document {
+  font-family: "Latin Modern Roman", "Computer Modern", serif;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.preview-content {
+  font-size: 12pt;
+}
+
+.preview-content h1 {
+  font-size: 18pt;
+  margin-bottom: 1rem;
+}
+
+.preview-content h2 {
+  font-size: 16pt;
+  margin-bottom: 0.8rem;
+}
+
+.preview-content h3 {
+  font-size: 14pt;
+  margin-bottom: 0.6rem;
+}
+
+.preview-content p {
+  margin-bottom: 1rem;
+}
+
+.preview-content .equation {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+/* Math rendering styles */
+.katex-display {
+  margin: 1em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.katex {
+  font-size: 1.1em;
+}
+
+/* Add these styles for the Sidebar */
+.sidebar-component {
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-component:hover {
+  background-color: #f8fafc;
+}
+
+code {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+}
+
+/* Add these styles for the navbar and sidebar animation */
+.sidebar-transition {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Navbar dropdown styles */
+.dropdown-menu {
+  transform-origin: top right;
+  transition: all 0.2s ease-out;
+}
+
+.dropdown-menu.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.dropdown-menu.hide {
+  transform: scale(0.95);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* LaTeX preview styles */
+.latex-preview {
+  font-family: "Latin Modern Roman", "Computer Modern", serif;
+  line-height: 1.5;
+  font-size: 12pt;
+}
+
+.latex-preview h1 {
+  font-size: 18pt;
+  margin-bottom: 1rem;
+}
+
+.latex-preview h2 {
+  font-size: 16pt;
+  margin: 1.5rem 0 1rem;
+}
+
+.latex-preview p {
+  margin-bottom: 1rem;
+}
+
+.latex-preview .math {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.latex-preview .error {
+  color: #cc0000;
+  padding: 1rem;
+  border: 1px solid #cc0000;
+  border-radius: 4px;
+  margin: 1rem 0;
+  background-color: #fff5f5;
+}
+
+/* Editor and Preview Container Styles */
+.editor-preview-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  transition: all 0.3s ease;
+  height: calc(100vh - 56px); /* Subtract navbar height */
+}
+
+/* Editor Styles */
+.editor-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 800px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  aspect-ratio: 1/1.414; /* A4 paper ratio */
+}
+
+/* Preview Styles */
+.preview-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 800px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  aspect-ratio: 1/1.414; /* A4 paper ratio */
+}
+
+.preview-paper {
+  height: 100%;
+  padding: 40px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+}
+
+/* Split container styles */
+.split {
+  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .editor-preview-container {
+    flex-direction: column;
+  }
+} 

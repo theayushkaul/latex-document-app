@@ -1,0 +1,476 @@
+\documentclass[12pt,letterpaper]{article}
+
+% Required packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{soul}
+\usepackage{changepage}
+
+% Page setup
+\geometry{margin=1in}
+
+% Color definitions
+\definecolor{linkcolor}{RGB}{0,0,238}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    filecolor=black,      
+    urlcolor=blue,
+    pdftitle={Model Documentation Template},
+    pdfauthor={CLIENT}
+}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% Title formatting
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Table of contents formatting
+\renewcommand{\contentsname}{Table of Contents}
+
+% Define a command for smallcaps that mimics Word's smallcaps
+\newcommand{\smallcapsstyle}[1]{\textsc{\MakeUppercase{#1}}}
+
+% Document begins
+\begin{document}
+
+% Title page
+{\centering
+\smallcapsstyle{CLIENT}
+
+\vspace{0.5cm}
+
+\smallcapsstyle{Model Documentation}
+
+\vspace{0.5cm}
+
+\begin{quote}
+\textbf{May 2023}
+\end{quote}
+\par}
+
+\tableofcontents
+\clearpage
+
+% Main content
+\section{EXECUTIVE SUMMARY}
+\textit{This section provides a brief description of the development of the model, the purpose, and intended use of the model, an overview of the model, and a summary of upstream and downstream dependencies of the model. If read on a standalone basis, the Executive Summary should convey the most important things to know about the model.}
+
+\textit{The Executive Summary should contain similar levels of detail regardless of the model risk rating.}
+
+\subsection{Model Development Information}
+\textit{State who developed the model and the period during which the model was developed. Discuss any plans to redevelop the model in the future.}
+
+\subsection{Model Purpose and Intended Use}
+\textit{Provide a high-level summary of the intended use or uses of the model and, if the model has been approved, the approved use or uses.}
+
+\subsection{High-Level Model Overview}
+\textit{Provide a high-level overview of the model, including the modeling approach implemented, input required by the model, the way the model processes or transforms inputs into outputs (the "processing" component, essentially the "core" of the model), and the nature and form of the output of the model.}
+
+\section{MODEL INFORMATION}
+\textit{This section provides basic information about the model. Dates should be written as "DDMMYYYY" and names as "First-Name Last-Name". Note that much of this information should align with information contained in the Model Inventory.}
+
+\subsection{Model Background}
+
+\begin{tabular}{|p{0.45\textwidth}|p{0.45\textwidth}|}
+\hline
+Model ID & \\
+\hline
+Model Name & \\
+\hline
+Model Risk Tier & \\
+\hline
+Internally Developed or Externally Purchased & \\
+\hline
+Vendor Name (if applicable) & \\
+\hline
+\end{tabular}
+
+\subsection{Key Names/Roles}
+
+\begin{tabular}{|p{0.45\textwidth}|p{0.45\textwidth}|}
+\hline
+Name of Current Model Owner & \\
+\hline
+Name of Model Developer & \\
+\hline
+Name of Model Implementer (if applicable) & \\
+\hline
+Model Approvers & \\
+\hline
+\end{tabular}
+
+\subsection{Model Use}
+
+\begin{tabular}{|p{0.45\textwidth}|p{0.45\textwidth}|}
+\hline
+Business / Risk Unit / Division / Group & \\
+\hline
+Model Purpose & \\
+\hline
+Model Restrictions / Limitations & \\
+\hline
+Model Outputs & \\
+\hline
+\end{tabular}
+
+\subsection{Key Dates and Related Information}
+
+\begin{tabular}{|p{0.45\textwidth}|p{0.45\textwidth}|}
+\hline
+Model Development Start Date & \\
+\hline
+Model Development Completion Date & \\
+\hline
+Development Platform & \\
+\hline
+Date of the Most Recent Material Model Change (if applicable) & \\
+\hline
+Initial Validation Completed (Y/N) & \\
+\hline
+Completion Date of the Most Recent Validation / Review (if applicable) & \\
+\hline
+Type of the Most Recent Validation / Review Completed (if applicable) & \\
+\hline
+Date of Model Approval for Initial Business Use (if applicable) & \\
+\hline
+Date of Most Recent Model Approval for Continued Business Use (if applicable) & \\
+\hline
+\end{tabular}
+
+\section{MODEL PURPOSE AND USE}
+\textit{This section provides information on the purpose and use of the model, as well as identified restrictions on particular uses of the model.}
+
+\subsection{Model Purpose}
+\textit{For what business use was the model built?}
+
+\textit{Any additional details regarding approved model use.}
+
+\subsection{Identified Restrictions on Use of the Model}
+\textit{List any identified restrictions on particular model uses (or intended uses, if the model has not yet been approved).}
+
+\section{MODEL SUMMARY}
+\textit{This section provides a description of the model, an overview of the product and portfolio for which the model is built, and upstream and downstream model dependencies. Note that the three major model components -- input, processing, and output or reporting -- are further described in later sections on production data, model implementation, and output, respectively.}
+
+\subsection{Model Description}
+
+\subsubsection{Overview of Model Input Components}
+\textit{Describe the model input components, such as the types of inputs to the model, any pre-processing required, and any key assumptions reflected in the model. Required for all model risk tiers, but detail expected to vary by risk tier.}
+
+\paragraph{Data Sources}
+
+\subsubsection{Overview of Model Processing Components}
+\textit{Describe the model processing components, such as the calculations, formulas, or other methods used within the model to create outputs from the inputs. Required for all model risk tiers. Detail expected to vary by model risk tier.}
+
+\paragraph{Modeling Approach}
+
+\subsubsection{Overview of Model Reporting Components}
+\textit{Describe the model reporting components, such as the type and form of output produced, which may include statistics or other information that is ancillary to the primary output of the model, as well as information about model accuracy or reliability. Required for all model risk tiers. Detail expected to vary by model risk tier.}
+
+\subsection{Product and Portfolio Overview}
+
+\subsubsection{Product Overview}
+\textit{Provide information on the product for which the model is used, or for which designed if the model is not yet in use. Describe how the model fits the product. Required for all model risk tiers. Detail expected to vary by model risk tier.}
+
+\subsubsection{Products and Portfolio Overview}
+
+\subsection{Model Upstream and Downstream Dependencies}
+
+\subsubsection{Model Upstream Dependencies}
+\textit{List any models that provide output used as input in the model. Describe the process by which upstream model output is transferred to the Model User, including coverage of roles, communication, timing, and frequency, as appropriate. Describe the process for receiving information from upstream Model Owners of material changes, errors, or violations of thresholds. Required for all model risk tiers.}
+
+\subsubsection{Model Downstream Dependencies}
+\textit{List any models that use output of the model as input. Describe the process by which model output is transferred to downstream Model Users, including coverage of roles, communication, timing, and frequency, as applicable. Describe the process for informing downstream Model Owners of material changes, errors, or violations of thresholds. Required for all model risk tiers.}
+
+\section{METHODOLOGY}
+\textit{This section describes the model's methodology, including the theoretical framework, empirical support, quantitative techniques, assumptions, and limitations of the model.}
+
+\textit{Considerations by Model risk tier:}
+\begin{itemize}
+\item \textit{This section may be quite extensive for High Risk models, with many pages devoted to discussion of alternatives, recent advances in the industry, derivation, and description of the preferred methodology, etc.}
+\item \textit{This section will be less extensive for Medium Risk models, insofar as it is expected that Medium Risk models will typically follow well-established methodologies. It should show some consideration for alternative modeling approaches, though to a much lesser extent than High Risk models (e.g., far less discussion of the relevant literature). While there is less of a need to discuss alternative approaches and provide supporting rationale for their use, derivation, and description of the preferred methodology, etc. should still be provided.}
+\item \textit{This section will be brief for Low Risk models and should include an overview of the most important aspects of the modeling approach. For example, it may not include a discussion of alternative approaches.}
+\end{itemize}
+
+\subsection{Theoretical Framework, Logic, and Design of the Model}
+\textit{Describe the theoretical framework, logical flow, and design/functional form of the model. Required for all model risk tiers.}
+
+\subsubsection{Conceptual Framework}
+
+\subsubsection{Model Flow}
+
+\subsubsection{Model Configuration}
+
+\subsubsection{Model Setup and Major Building Blocks}
+
+\subsection{Support for Theoretical Framework, Logic, and Design of the Model}
+
+\subsubsection{Academic or Technical Literature Support}
+\textit{Discuss relevant academic or technical literature reviewed to support the chosen theoretical framework, logic, and design of the model. More detail required for High Risk than for Medium Risk. May be omitted for Low Risk.}
+
+\subsubsection{Industry Practice}
+\textit{Discuss relevant industry practices, methodologies, or models. More detail required for High Risk than for Medium Risk. May be omitted for Low Risk.}
+
+\subsubsection{Empirical Support}
+\textit{Discuss any other empirical evidence that supports the chosen theoretical framework, logic, and design of the model. Must be added for all model risk tiers, where readily available.}
+
+\subsubsection{Concerns on Prior Model}
+\textit{If the model is replacing another model, describe any concerns related to the model that is being replaced. Include references to documentation of such areas as model limitations or outstanding issues where available. Must be added for all model risk tiers, where applicable.}
+
+\subsubsection{Rationale for Model Framework, Logic, and Design Selection}
+\textit{Assess the chosen theoretical framework, logic, and design of the model against alternative industry practices, methodologies, or models that were considered, explaining the reasons for selection of the chosen model design over alternative choices. Consider the effectiveness, efficiency, and clarity of the model process as part of this assessment. (Note that the section below on analysis, testing, and benchmarking discusses benchmarking used in the development process.) More detail required for High Risk than for Medium Risk. May be omitted for Low Risk.}
+
+\subsection{Variable Selection}
+
+\subsubsection{Variable Selection Methodology}
+\textit{Describe the methodology employed to select the variables used in the model. Required for all model risk tiers. Detail expected to vary by model risk tier.}
+
+\subsubsection{Technical Steps}
+
+\paragraph{Variable Selection Methodology}
+
+\paragraph{Exploratory Analysis}
+
+\paragraph{Variable Selection Methodology}
+
+\paragraph{Identified Economic Variables}
+
+\subsubsection{Selected Variables}
+\textit{List and describe the variables selected for use in the model. Discuss the relative magnitude and direction of impact of selected variables on model results. Required for all model risk tiers.}
+
+\subsubsection{Considered Variables}
+\textit{List and describe any variables that were considered, but not selected, for use in the model. Required for High Risk and Medium Risk models only.}
+
+\subsection{Mathematical/Quantitative Techniques}
+\textit{Discuss the mathematical specifications and quantitative techniques used to develop the model, including:}
+\begin{itemize}
+\item \textit{The techniques used to estimate the model.}
+\item \textit{The optimization, statistical, or econometric methodologies used to develop the model.}
+\end{itemize}
+\textit{Required for all model risk tiers. More detail is expected of higher risk models insofar as they are likely to use more complex techniques.}
+
+\paragraph{Modeling Approach}
+
+\paragraph{Simulation of Property Financials}
+
+\subsection{Development Platform}
+\textit{State the software platform or platforms used to develop the model; include additional context as appropriate and discuss the rationale for platform selection. Required for all model risk tiers.}
+
+\subsection{Development Code, Formulas, and Calculations}
+\textit{Describe the development code, and the implementation of key formulas and/or calculations used in the development of the model. Required for all model risk tiers.}
+\begin{itemize}
+\item \textit{For Low Risk models, details regarding development code, formulas, etc. may be left to model code and/or spreadsheets. In such cases, model code and/or spreadsheets should contain comments with sufficient details to allow a person unfamiliar with the model, but with relevant experience and competence, to understand and if necessary, replicate the code.}
+\end{itemize}
+
+\subsection{Implementation Platform}
+\textit{State the software platform or platforms used to implement the model; include additional context as appropriate and discuss the rationale for platform selection. Required for all model risk tiers.}
+
+\textit{Section not required if implementation platform is the same as development platform.}
+
+\subsection{Implementation Code, Formulas, and Calculations}
+\textit{Describe the implementation code, and the implementation of key formulas and/or calculations used in the development of the model. Include details of any testing performed to mitigate the risk of implementation errors. Required for all model risk tiers.}
+
+\textit{Section not required if implementation platform is the same as development platform.}
+
+\subsection{Assumptions}
+\textit{List and describe the key assumptions underlying the model, including:}
+\begin{itemize}
+\item \textit{Key assumptions or approximations used in the model.}
+\item \textit{Key areas of uncertainty in assumptions or approximations used in the model.}
+\item \textit{Whether the assumptions or approximations used in the model are valid for certain time periods or market/economic conditions but not others. If so, describe the process for modifying any assumptions and approximations that are not appropriate under such periods or conditions.}
+\end{itemize}
+
+\textit{The discussion of model assumptions for High Risk models is most extensive. The discussion of model assumptions for Medium Risk and Low Risk models should be accomplished in a few concise paragraphs. It is expected that these models will follow well-established methodologies whose assumptions are well-understood within the industry.}
+
+\subsubsection{Methodology}
+
+\subsection{Qualitative Judgment Used in Development}
+\textit{Discuss qualitative judgment or assumptions, including conservative adjustments or other forms of conservatism, used in the development process and/or included as part of the design of the model. Required for all model risk tiers.}
+
+\subsection{Empirical Support for Qualitative Assumptions}
+\textit{Describe the empirical support, analysis, or other evidence for key qualitative assumptions and uses of expert judgment. Required for all model risk tiers.}
+
+\subsection{Limitations}
+\textit{List and describe any clear limitations of the model (i.e., circumstances or scope under which the model may not work effectively), including those arising from: the availability, accuracy, and reliability of data; the use of approximations or transformations of input variables; the model's assumptions; and the model's methodology. Discuss their impact on the model's suitability for its actual or intended business use. Identify the uses that are impacted and discuss possible ways in which the limitations can be overcome. Required for all model risk tiers.}
+
+\section{MODEL OPERATING PROCEDURES}
+\textit{Provide a detailed description (step by step) on how to operate the model to the level where the primary person is not available to generate results or available to provide any level of assistance.}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\section{DEVELOPMENT DATA}
+\textit{This section describes the data used to develop the model, including data sources, quality, transformations, and loading processes.}
+
+\textit{Consideration by Model risk tiers:}
+
+\textit{Medium Risk models will generally have less data, present fewer charts, and have less testing of data than High Risk models. In addition, the focus for Medium Risk models should be on only the most important data issues, whereas High Risk models should contain a complete discussion of all issues.}
+
+\textit{For Low-Risk models, details regarding data, transformations, etc. may be left to model code and/or spreadsheets, when these follow standard approaches and are well-organized.}
+
+\subsection{Data Description}
+\textit{Discuss the data used to develop the model. Provide summary information about the size of the dataset. Provide descriptions and definitions of data types and fields that may not be evident. Required for all model risk tiers. Detail expected to vary by model risk tier. All should include standard data statistics.}
+
+\subsection{Data Sources}
+\textit{Discuss the data sources for the development data, including the credibility and reliability of such sources. If the development data source is internal, indicate any approval received from data owners to use the data. Required for all model risk tiers.}
+
+\subsection{Data Handling, Scrubbing, and Processing}
+\textit{Describe how the data was collected, extracted, and stored. Discuss any data cleaning or processing techniques used on the development data. High and Medium Risk models require all content. Low Risk models need only address data cleaning and processing techniques.}
+
+\subsubsection{Data Completeness}
+\textit{Assess the completeness of the data used to develop the model. Discuss any missing or unavailable data and the implications of such issues on the development of the model. Discuss the handling of missing values (e.g., replaced missing data with mean, interpolation, etc.). Discuss the use of any proxy data (data used to represent or approximate other, more suitable data that is otherwise unavailable). Required for all model risk tiers.}
+
+\subsubsection{Data Sampling}
+\textit{If a subset of the development dataset is used, justify and discuss the sampling strategy. This discussion should identify the potential for sample selection bias. Required for all model risk tiers.}
+
+\subsubsection{Data Filtering, Exclusions, and Outliers}
+\textit{State whether filtering was applied to internal or third-party data in order to eliminate or limit some part of the data in model development. Discuss the rationale for the decision to filter the data. Describe the filtering applied to the data and the methodology used to filter the data and discuss the treatment of any outliers. Required for all model risk tiers.}
+
+\subsubsection{Data Adjustments}
+\textit{Describe any modifications, transformations, or other manipulations of the development data, including attributes and observations derived through calculations applied to pre-modified data. Required for all model risk tiers.}
+
+\subsection{Data Quality and Reliability}
+\textit{Discuss the quality and reliability of the data used in the development of the model, including assessments of whether limitations in the data are likely to create issues with model estimation and calibration. Required for all model risk tiers. Detail expected to vary by model risk tier.}
+
+\section{ANALYSIS, TESTING, AND BENCHMARKING}
+\textit{This section provides information with respect to testing and analysis performed during the development process to develop the model and assess model performance.}
+
+\textit{Consideration by Model risk tiers:}
+
+\textit{The discussion of testing will be shorter for Medium Risk models than for High Risk to the extent that the tests will be very commonly used for models of this type and not require extensive justification. It is expected that the choice of tests will be clear based on industry practices and/or that fewer tests will be required to confirm that the model is statistically and financially sound.}
+
+\textit{The discussion of testing for Low-Risk models will be less extensive than for Medium Risk models.}
+
+\subsection{Sensitivity Analysis}
+\textit{Describe testing and analysis of the sensitivity of the model to changes in inputs, parameters, and assumptions. For systems of models or models with sub-models, sensitivity testing should be performed to assess the impact of intermediate output on the final model output. Discuss results of such testing and analysis. For High-Risk models, detailed analysis of informative samples should be included.}
+
+\subsection{Extreme Value Testing}
+\textit{Describe testing and analysis of model performance for combinations of input values well outside of likely ranges. For systems of models or models with sub-models, extreme value testing should be conducted on each model or sub-model individually and in aggregate. Discuss results of such testing and analysis. For High Risk models, detailed analysis should be included.}
+
+\subsection{Statistical Tests}
+\textit{Describe any statistical testing and analysis performed during development testing for stability, accuracy, and/or power. For systems of models or models with sub-models, statistical testing should be conducted on each model or sub-model individually and in aggregate. Discuss results of such statistical testing and analysis. Required for all model risk tiers.}
+
+\subsection{Back-Testing}
+\textit{Describe comparisons of model predictions against actual outcomes. Distinguish between in-sample and out-of-sample back-tests. For systems of models or models with sub-models, back-testing should be conducted on each model or sub-model individually and in aggregate. Discuss results of such back-testing. For High Risk models, detailed analysis of informative samples should be included.}
+
+\subsection{Benchmarking Used in Development}
+\textit{Discuss any benchmarking (comparison of model output or components to data or other information not used in the model or generated by other models or methods) used in the development process. Include a description of:}
+\begin{itemize}
+\item \textit{The benchmarks used.}
+\item \textit{The benchmark values.}
+\item \textit{For High Risk models, any variances between the benchmark values and the model's output should be discussed. For Medium Risk models, results may be summarized. For Low Risk models, results can be simply acceptable or not acceptable. Full variance data should be made available as an accompanying file.}
+\item \textit{The influence of such benchmarking on model selection and specification.}
+\end{itemize}
+
+\subsection{Other Development Tests and Analysis}
+\textit{Describe any other testing and analysis performed during development to evaluate the model. Discuss results of such testing and analysis. For High Risk models, detailed analysis of informative samples should be included.}
+
+\subsection{Review and Challenge}
+\textit{Discuss any input and challenge that relevant business groups provided regarding the structure of the model. Include any changes or overlays made to the model framework based on such review and challenge. Required for all model risk tiers.}
+
+\section{MODEL OUTPUT}
+\textit{This section provides information regarding output of the model and reporting, and decision-making based on model output.}
+
+\subsection{Model Output}
+\textit{Describe the model output, including output files, fields, or variables. Must be highly detailed for High Risk and Medium Risk models, including descriptions and definitions of each field. Low Risk models require only an overview of the model output.}
+
+\subsection{Model Output Analysis}
+\textit{Describe any analyses that the Model Owner and/or Model User should conduct to verify that the model output is reasonable, including expected ranges for the output. Required for High Risk and Medium Risk models. Optional for Low Risk models.}
+
+\subsection{Benchmarking}
+\textit{Describe any known benchmarks against which to compare the output of the model. If a challenger model is used, discuss the differences between the structure, methodology, and expected output of the challenger model and the selected model. Required for High Risk and Medium Risk models. Optional for Low Risk models.}
+
+\subsection{Model Output Overrides}
+\textit{Describe any overrides to model output that may be appropriate. Discuss the methodology and process, including documentation requirements, for making such overrides. Required for all models.}
+
+\subsection{Use and Reporting of Model Output}
+\textit{Discuss how the output from the model is used in reports or otherwise used in decision-making processes. Include instruction, as appropriate, for conveying limitations for output use and measures of model limitations and output reliability in reporting. Required for all model risk tiers. Enhanced detail will be required for higher risk models.}
+
+\section{MODEL MAINTENANCE}
+\textit{This section discusses expectations for updating the model to maintain its effectiveness and performance. Consider references to ongoing monitoring results, and their implications for determining the need for specific model maintenance activities.}
+
+\subsection{Model Re-Calibration}
+\textit{Discuss the expected necessity, frequency, and extent of model re-calibration. Required for all model risk tiers.}
+
+\subsection{Model Re-Parameterization}
+\textit{Discuss the expected necessity, frequency, and extent of model re-parameterization. Required for all model risk tiers.}
+
+\subsection{Routine Updates}
+\textit{Provide information on changes to the model as routine updates. Discuss the expected necessity, frequency, and extent of such routine updates. Required for all model risk tiers.}
+
+\section{ONGOING MONITORING}
+\textit{This section provides information with respect to ongoing monitoring of the model.}
+
+\subsection{Model Monitoring Plan, Methodology, and Performance Thresholds}
+\textit{Provide details of the model monitoring plan, methodology, and performance thresholds.}
+
+\subsection{Actions in Response to Potential Issues Identified Through Ongoing Monitoring}
+\textit{Describe the actions to be taken in response to potential issues identified through ongoing monitoring.}
+
+\section{GOVERNANCE}
+\textit{This section provides information on the governance of the model.}
+
+\subsection{CLIENT and Regulatory Requirements}
+\textit{Discuss CLIENT and regulatory requirements relevant to the model.}
+
+\subsection{Model and Related Files Location and Security}
+\textit{Provide information on the location and security of the model and related files.}
+
+\subsection{Development Code and Data Location and Security}
+\textit{Provide information on the location and security of development code and data.}
+
+\subsection{Model Documentation and Other Relevant Files Location and Security}
+\textit{Provide information on the location and security of model documentation and other relevant files.}
+
+\subsection{Change and Version Controls}
+\textit{Describe change and version controls for the model.}
+
+\subsection{Vendor and Third-Party Management Adequacy (if applicable)}
+\textit{Discuss the adequacy of vendor and third-party management, if applicable.}
+
+\section{APPENDICES}
+\textit{This section provides appendices to the model documentation.}
+
+\subsection{Model Documentation Update History}
+\textit{Provide a history of updates to the model documentation.}
+
+\subsection{Model Change Log}
+\textit{Provide a log of changes to the model.}
+
+\subsection{Model Issue Log}
+\textit{Provide a log of issues related to the model.}
+
+\subsection{Model Terminology}
+\textit{Provide definitions of terminology used in the model documentation.}
+
+\subsection{Related Documentation Items and Reports to Management, Directors, and Auditors}
+\textit{List related documentation items and reports to management, directors, and auditors.}
+
+\subsection{Additional Information-for all models. Please provide any additional documentation.}
+\textit{Model documentation includes not only the formal written paper, but also all material to be used as developmental evidence for model validation, including developmental data and test results. Such information should be included in this appendix, or possibly through additional appendices if the volume or complexity of the material is significant.}
+
+[N/A]
+
+\end{document}

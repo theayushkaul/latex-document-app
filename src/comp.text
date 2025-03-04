@@ -1,0 +1,190 @@
+<DocumentSetup 
+  documentClass="article"
+  options="12pt,letterpaper"
+  packages={[
+    "utf8:inputenc",
+    "T1:fontenc",
+    "geometry",
+    "titlesec",
+    "titletoc",
+    "hyperref",
+    "xcolor",
+    "array",
+    "tabularx",
+    "longtable",
+    "enumitem",
+    "fancyhdr",
+    "graphicx",
+    "soul",
+    "changepage"
+  ]}
+/>
+
+<PageSetup margin="1in" />
+
+<ColorDefinition name="linkcolor" rgb="0,0,238" />
+
+<HyperSetup
+  colorlinks=true
+  linkcolor="linkcolor"
+  filecolor="black"
+  urlcolor="blue"
+  pdftitle="Model Documentation Template"
+  pdfauthor="CLIENT"
+/>
+
+<HeaderFooter
+  headerRight="\\thepage"
+  headRuleWidth="0pt"
+/>
+
+<TitleFormat
+  section="{\\normalfont\\Large\\bfseries}"
+  subsection="{\\normalfont\\large\\bfseries}"
+  subsubsection="{\\normalfont\\normalsize\\bfseries}"
+/>
+
+<TableOfContentsFormat name="Table of Contents" />
+
+# Title Page
+<PageStyle style="empty" />
+<SmallCaps content="CLIENT" align="center" />
+
+<Text content=" " />
+
+<SmallCaps content="Model Documentation" align="center" />
+
+<Text content=" " />
+
+<Quote content="May 2023" bold=true align="center" />
+
+<PageBreak />
+<PageStyle style="fancy" />
+
+# Table of Contents
+<TableOfContents />
+
+<PageBreak />
+
+# Executive Summary
+<Section title="EXECUTIVE SUMMARY" align="left" bold=true />
+
+<Paragraph content="This section provides a brief description of the development of the model, the purpose, and intended use of the model, an overview of the model, and a summary of upstream and downstream dependencies of the model. If read on a standalone basis, the Executive Summary should convey the most important things to know about the model." align="justify" italic=true />
+
+<Paragraph content="The Executive Summary should contain similar levels of detail regardless of the model risk rating." align="justify" italic=true />
+
+<Subsection title="Model Development Information" align="left" bold=true />
+<Paragraph content="State who developed the model and the period during which the model was developed. Discuss any plans to redevelop the model in the future." align="justify" italic=true />
+
+<Subsection title="Model Purpose and Intended Use" align="left" bold=true />
+<Paragraph content="Provide a high-level summary of the intended use or uses of the model and, if the model has been approved, the approved use or uses." align="justify" italic=true />
+
+<Subsection title="High-Level Model Overview" align="left" bold=true />
+<Paragraph content="Provide a high-level overview of the model, including the modeling approach implemented, input required by the model, the way the model processes or transforms inputs into outputs (the 'processing' component, essentially the 'core' of the model), and the nature and form of the output of the model." align="justify" italic=true />
+
+# Model Information
+<Section title="MODEL INFORMATION" align="left" bold=true />
+<Paragraph content="This section provides basic information about the model. Dates should be written as 'DDMMYYYY' and names as 'First-Name Last-Name'. Note that much of this information should align with information contained in the Model Inventory." align="justify" italic=true />
+
+<Subsection title="Model Background" align="left" bold=true />
+
+<Table 
+  headers="Field,Value"
+  rows="Model ID,;Model Name,;Model Risk Tier,;Internally Developed or Externally Purchased,;Vendor Name (if applicable),"
+  columnWidths="0.45\\textwidth,0.45\\textwidth"
+  caption=""
+  align="center"
+/>
+
+<Subsection title="Key Names/Roles" align="left" bold=true />
+
+<Table 
+  headers="Role,Name"
+  rows="Name of Current Model Owner,;Name of Model Developer,;Name of Model Implementer (if applicable),;Model Approvers,"
+  columnWidths="0.45\\textwidth,0.45\\textwidth"
+  caption=""
+  align="center"
+/>
+
+<Subsection title="Model Use" align="left" bold=true />
+
+<Table 
+  headers="Category,Details"
+  rows="Business / Risk Unit / Division / Group,;Model Purpose,;Model Restrictions / Limitations,;Model Outputs,"
+  columnWidths="0.45\\textwidth,0.45\\textwidth"
+  caption=""
+  align="center"
+/>
+
+<Subsection title="Key Dates and Related Information" align="left" bold=true />
+
+<Table 
+  headers="Information,Details"
+  rows="Model Development Start Date,;Model Development Completion Date,;Development Platform,;Date of the Most Recent Material Model Change (if applicable),;Initial Validation Completed (Y/N),;Completion Date of the Most Recent Validation / Review (if applicable),;Type of the Most Recent Validation / Review Completed (if applicable),;Date of Model Approval for Initial Business Use (if applicable),;Date of Most Recent Model Approval for Continued Business Use (if applicable),"
+  columnWidths="0.45\\textwidth,0.45\\textwidth"
+  caption=""
+  align="center"
+/>
+
+# Model Purpose and Use
+<Section title="MODEL PURPOSE AND USE" align="left" bold=true />
+<Paragraph content="This section provides information on the purpose and use of the model, as well as identified restrictions on particular uses of the model." align="justify" italic=true />
+
+<Subsection title="Model Purpose" align="left" bold=true />
+<Paragraph content="For what business use was the model built?" align="justify" italic=true />
+<Paragraph content="Any additional details regarding approved model use." align="justify" italic=true />
+
+<Subsection title="Identified Restrictions on Use of the Model" align="left" bold=true />
+<Paragraph content="List any identified restrictions on particular model uses (or intended uses, if the model has not yet been approved)." align="justify" italic=true />
+
+# Model Summary
+<Section title="MODEL SUMMARY" align="left" bold=true />
+<Paragraph content="This section provides a description of the model, an overview of the product and portfolio for which the model is built, and upstream and downstream model dependencies. Note that the three major model components -- input, processing, and output or reporting -- are further described in later sections on production data, model implementation, and output, respectively." align="justify" italic=true />
+
+<Subsection title="Model Description" align="left" bold=true />
+
+<Subsubsection title="Overview of Model Input Components" align="left" bold=true />
+<Paragraph content="Describe the model input components, such as the types of inputs to the model, any pre-processing required, and any key assumptions reflected in the model. Required for all model risk tiers, but detail expected to vary by risk tier." align="justify" italic=true />
+
+<Subsubsection title="Overview of Model Processing Components" align="left" bold=true />
+<Paragraph content="Describe the model processing components, such as the calculations, formulas, or other methods used within the model to create outputs from the inputs. Required for all model risk tiers. Detail expected to vary by model risk tier." align="justify" italic=true />
+
+<Subsubsection title="Overview of Model Reporting Components" align="left" bold=true />
+<Paragraph content="Describe the model reporting components, such as the type and form of output produced, which may include statistics or other information that is ancillary to the primary output of the model, as well as information about model accuracy or reliability. Required for all model risk tiers. Detail expected to vary by model risk tier." align="justify" italic=true />
+
+<Subsection title="Product and Portfolio Overview" align="left" bold=true />
+
+<Subsubsection title="Product Overview" align="left" bold=true />
+<Paragraph content="Provide information on the product for which the model is used, or for which designed if the model is not yet in use. Describe how the model fits the product. Required for all model risk tiers. Detail expected to vary by model risk tier." align="justify" italic=true />
+
+<Subsubsection title="Products and Portfolio Overview" align="left" bold=true />
+
+<Subsection title="Model Upstream and Downstream Dependencies" align="left" bold=true />
+
+<Subsubsection title="Model Upstream Dependencies" align="left" bold=true />
+<Paragraph content="Discuss relevant academic or technical literature reviewed to support the chosen theoretical framework, logic, and design of the model. More detail required for High Risk than for Medium Risk. May be omitted for Low Risk." align="justify" italic=true />
+
+<Subsubsection title="Industry Practice" align="left" bold=true />
+<Paragraph content="Discuss relevant industry practices, methodologies, or models. More detail required for High Risk than for Medium Risk. May be omitted for Low Risk." align="justify" italic=true />
+
+<List 
+  type="itemize"
+  items="Key areas of uncertainty in assumptions or approximations used in the model.;Whether the assumptions or approximations used in the model are valid for certain time periods or market/economic conditions but not others. If so, describe the process for modifying any assumptions and approximations that are not appropriate under such periods or conditions."
+/>
+
+<Paragraph content="The discussion of model assumptions for High Risk models is most extensive. The discussion of model assumptions for Medium Risk and Low Risk models should be accomplished in a few concise paragraphs. It is expected that these models will follow well-established methodologies whose assumptions are well-understood within the industry." align="justify" italic=true />
+
+<Subsubsection title="Data Filtering" align="left" bold=true />
+<Paragraph content="State whether filtering was applied to internal or third-party data in order to eliminate or limit some part of the data in model development. Discuss the rationale for the decision to filter the data. Describe the filtering applied to the data and the methodology used to filter the data and discuss the treatment of any outliers. Required for all model risk tiers." align="justify" italic=true />
+
+<Subsubsection title="Data Adjustments" align="left" bold=true />
+<Paragraph content="Describe any modifications, transformations, or other manipulations of the development data, including attributes and observations derived through calculations applied to pre-modified data. Required for all model risk tiers." align="justify" italic=true />
+
+<Section title="Model Output" align="left" bold=true />
+<Paragraph content="This section provides information regarding output of the model and reporting, and decision-making based on model output." align="justify" italic=true />
+
+<Subsection title="Model Output" align="left" bold=true />
+<Paragraph content="Describe the model output, including output files, fields, or variables. Must be highly detailed for High Risk and Medium Risk models, including descriptions and definitions of each field. Low Risk models require only an overview of the model output." align="justify" italic=true />
+
+<Section title="Appendix" align="left" bold=true />
+<Paragraph content="Model documentation includes not only the formal written paper, but also all material to be used as developmental evidence for model validation, including developmental data and test results. Such information should be included in this appendix, or possibly through additional appendices if the volume or complexity of the material is significant." align="justify" italic=true />
